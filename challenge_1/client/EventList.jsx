@@ -1,23 +1,13 @@
 
 import React from 'react';
-import EventList from './EventList';
-import Search from './Search';
 
-class App extends React.Component {
+class EventList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       query: '',
-      events: [
-        {
-          date: "-300",
-          description: "Pilgrims, man. F*ckin pilgrims.",
-          lang: "en",
-          category1: "By place",
-          category2: "Greece",
-          granularity: "year",
-        }
-      ],
+      input: '',
+      events: [],
     };
   }
 
@@ -27,16 +17,12 @@ class App extends React.Component {
   render() {
     const { events, query } = this.state;
     return (
-      <div>
-        <h3>And me, Im an APP.. but can an app feel love?</h3>
-        <Search events={events} query={query} />
-        <EventList events={events} query={query} />
-      </div>
+      <h3>Despite being an EVENTLIST, my life is pretty uneventful.</h3>
     );
   }
 }
 
-export default App;
+export default EventList;
 
 /*
 {
