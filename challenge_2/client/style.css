@@ -1,0 +1,10 @@
+.main-flex {
+  display: flex;
+  flex-direction: row;
+  max-width: 1080px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: auto !important;
+  padding-right: 24px !important;
+  padding-left: 24px !important;
+}
