@@ -9,7 +9,6 @@ app.use('/', express.static('public'));
 
 app.get('/api/:start/:end', (req, res) => {
   const { start, end } = req.params;
-  console.log(req.params);
   if (start === '0' || end === '0') {
     axios.get('https://api.coindesk.com/v1/bpi/historical/close.json')
       .then((response) => {

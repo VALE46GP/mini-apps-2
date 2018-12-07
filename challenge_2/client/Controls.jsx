@@ -27,7 +27,6 @@ class Controls extends React.Component {
 
   submitDates() {
     const { handleSubmitDates } = this.props;
-    console.log(this.state);
     handleSubmitDates(this.state);
   }
 

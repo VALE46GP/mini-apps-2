@@ -29,8 +29,6 @@ class App extends React.Component {
         const data = response.data.bpi;
         const intervals = Object.keys(data);
         const values = Object.values(data);
-        console.log('intervals = ', intervals);
-        console.log('values = ', values);
 
         this.setState({
           intervals,

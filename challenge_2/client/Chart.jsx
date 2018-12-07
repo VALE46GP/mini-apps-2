@@ -34,7 +34,6 @@ const Chart = (props) => {
 
   return (
     <div>
-      <h2>BitCoin Value in USD</h2>
       <Line data={data} />
       <h6>Powered by CoinDesk</h6>
     </div>
