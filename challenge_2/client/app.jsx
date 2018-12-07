@@ -1,5 +1,6 @@
 
 import React from 'react';
+import axios from 'axios';
 import Chart from './Chart';
 import Controls from './Controls';
 import './style.css';
@@ -7,18 +8,46 @@ import './style.css';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      intervals: [],
+      values: [],
+    };
+    this.handleSubmitDates = this.handleSubmitDates.bind(this);
   }
 
   componentDidMount() {
+    this.handleSubmitDates({
+      start: 0,
+      end: 0,
+    });
+  }
 
+  handleSubmitDates(state) {
+    const { start, end } = state;
+    axios.get(`/api/${start}/${end}`)
+      .then((response) => {
+        const data = response.data.bpi;
+        const intervals = Object.keys(data);
+        const values = Object.values(data);
+        console.log('intervals = ', intervals);
+        console.log('values = ', values);
+
+        this.setState({
+          intervals,
+          values,
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }
 
   render() {
+    const { intervals, values } = this.state;
     return (
       <div>
-        <Controls />
-        <Chart />
+        <Controls handleSubmitDates={this.handleSubmitDates} />
+        <Chart intervals={intervals} values={values} />
       </div>
     );
   }

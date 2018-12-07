@@ -8,10 +8,9 @@ class Controls extends React.Component {
       start: '',
       end: '',
     };
-  }
-
-  componentDidMount() {
-
+    this.updateStart = this.updateStart.bind(this);
+    this.updateEnd = this.updateEnd.bind(this);
+    this.submitDates = this.submitDates.bind(this);
   }
 
   updateStart(event) {
@@ -20,12 +19,17 @@ class Controls extends React.Component {
     });
   }
 
-  updateEnd() {
-
+  updateEnd(event) {
+    this.setState({
+      end: event.target.value,
+    });
   }
 
-  const { handleSubmit } = this.props;
-  
+  submitDates() {
+    const { handleSubmitDates } = this.props;
+    console.log(this.state);
+    handleSubmitDates(this.state);
+  }
 
   render() {
     return (
@@ -36,10 +40,11 @@ class Controls extends React.Component {
         </div>
         <div>
           <p>End:</p>
-          <input type="date" name="start" />
+          <input onChange={this.updateEnd} type="date" name="end" />
         </div>
         <div>
-          <button onClick={this.handleSubmit}>Submit</button>
+          <p />
+          <button onClick={this.submitDates} type="submit">Submit</button>
         </div>
       </div>
     );
