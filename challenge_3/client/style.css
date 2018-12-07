@@ -1,0 +1,39 @@
+* {box-sizing: border-box;}
+
+.grid-container {
+  width: 1000px;
+  border: 1px solid #f76707;
+  background-color: #fff4e6;
+}
+
+.grid-container > div {
+  color: #d9480f;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 240px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 120px;
+  grid-template-rows: 30px 30px 30px;
+  grid-template-areas:
+    "t-name t1 t1 t2 t2 t3 t3 t4 t4 t5 t5 t6 t6 t7 t7 t8 t8 t9 t9 t10 t10 t10 t-total"
+    "name f1l f1r f2l f2r f3l f3r f4l f4r f5l f5r f6l f6r f7l f7r f8l f8r f9l f9r f10l f10r f10b total"
+    "name f1 f1 f2 f2 f3 f3 f4 f4 f5 f5 f6 f6 f7 f7 f8 f8 f9 f9 f10 f10 f10 total";
+}
+.t-name {
+  grid-area: name;
+  background-color: #52dbe8;
+  justify-content: center;
+  align-items: center;
+}
+.name {
+  display: flex;
+  grid-area: name;
+  background-color: #68ffec;
+}
+.f1 {
+  grid-area: f1;
+  background-color: #52dbe8;
+}
+.total {
+  grid-area: total;
+}
