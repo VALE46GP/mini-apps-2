@@ -1,6 +1,7 @@
 
 import React from 'react';
 import Scoreboard from './Scoreboard';
+import Controls from './Controls';
 import './style.css';
 
 class App extends React.Component {
@@ -18,7 +19,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h3>App</h3>
+        <Controls />
         <Scoreboard />
       </div>
     );

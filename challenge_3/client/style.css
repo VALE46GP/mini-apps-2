@@ -1,13 +1,24 @@
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
-.grid-container {
-  width: 1000px;
-  border: 1px solid #f76707;
-  background-color: #fff4e6;
+.background {
+  /* The image used */
+  background-image: url("https://s3-us-west-1.amazonaws.com/react-bowling/lane_background_1.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: repeat;
+  background-size: stretch;
 }
 
 .grid-container > div {
   color: #d9480f;
+  justify-content: center;
+  align-items: center;
 }
 
 .grid-container {
@@ -19,11 +30,71 @@
     "name f1l f1r f2l f2r f3l f3r f4l f4r f5l f5r f6l f6r f7l f7r f8l f8r f9l f9r f10l f10r f10b total"
     "name f1 f1 f2 f2 f3 f3 f4 f4 f5 f5 f6 f6 f7 f7 f8 f8 f9 f9 f10 f10 f10 total";
 }
+.pin {
+  
+}
+/* 
+// GRID BOXES //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
 .t-name {
-  grid-area: name;
-  background-color: #52dbe8;
-  justify-content: center;
-  align-items: center;
+  display: flex;
+  grid-area: t-name;
+  background-color: #B7FFEC;
+}
+.t1 {
+  display: flex;
+  grid-area: t1;
+  background-color: #B7FFEC;
+}
+.t2 {
+  display: flex;
+  grid-area: t2;
+  background-color: #B7FFEC;
+}
+.t3 {
+  display: flex;
+  grid-area: t3;
+  background-color: #B7FFEC;
+}
+.t4 {
+  display: flex;
+  grid-area: t4;
+  background-color: #B7FFEC;
+}
+.t5 {
+  display: flex;
+  grid-area: t5;
+  background-color: #B7FFEC;
+}
+.t6 {
+  display: flex;
+  grid-area: t6;
+  background-color: #B7FFEC;
+}
+.t7 {
+  display: flex;
+  grid-area: t7;
+  background-color: #B7FFEC;
+}
+.t8 {
+  display: flex;
+  grid-area: t8;
+  background-color: #B7FFEC;
+}
+.t9 {
+  display: flex;
+  grid-area: t9;
+  background-color: #B7FFEC;
+}
+.t10 {
+  display: flex;
+  grid-area: t10;
+  background-color: #B7FFEC;
+}
+.t-total {
+  display: flex;
+  grid-area: t-total;
+  background-color: #B7FFEC;
 }
 .name {
   display: flex;
@@ -31,9 +102,162 @@
   background-color: #68ffec;
 }
 .f1 {
+  display: flex;
   grid-area: f1;
   background-color: #52dbe8;
 }
+.f1l {
+  display: flex;
+  grid-area: f1l;
+  background-color: #52dbe8;
+}
+.f1r {
+  display: flex;
+  grid-area: f1r;
+  background-color: #68ffec;
+}
+.f2 {
+  display: flex;
+  grid-area: f2;
+  background-color: #5ccfff;
+}
+.f2l {
+  display: flex;
+  grid-area: f2l;
+  background-color: #5ccfff;
+}
+.f2r {
+  display: flex;
+  grid-area: f2r;
+  background-color: #68ffec;
+}
+.f3 {
+  display: flex;
+  grid-area: f3;
+  background-color: #52dbe8;
+}
+.f3l {
+  display: flex;
+  grid-area: f3l;
+  background-color: #52dbe8;
+}
+.f3r {
+  display: flex;
+  grid-area: f3r;
+  background-color: #68ffec;
+}
+.f4 {
+  display: flex;
+  grid-area: f4;
+  background-color: #5ccfff;
+}
+.f4l {
+  display: flex;
+  grid-area: f4l;
+  background-color: #5ccfff;
+}
+.f4r {
+  display: flex;
+  grid-area: f4r;
+  background-color: #68ffec;
+}
+.f5 {
+  display: flex;
+  grid-area: f5;
+  background-color: #52dbe8;
+}
+.f5l {
+  display: flex;
+  grid-area: f5l;
+  background-color: #52dbe8;
+}
+.f5r {
+  display: flex;
+  grid-area: f5r;
+  background-color: #68ffec;
+}
+.f6 {
+  display: flex;
+  grid-area: f6;
+  background-color: #5ccfff;
+}
+.f6l {
+  display: flex;
+  grid-area: f6l;
+  background-color: #5ccfff;
+}
+.f6r {
+  display: flex;
+  grid-area: f6r;
+  background-color: #68ffec;
+}
+.f7 {
+  display: flex;
+  grid-area: f7;
+  background-color: #52dbe8;
+}
+.f7l {
+  display: flex;
+  grid-area: f7l;
+  background-color: #52dbe8;
+}
+.f7r {
+  display: flex;
+  grid-area: f7r;
+  background-color: #68ffec;
+}
+.f8 {
+  display: flex;
+  grid-area: f8;
+  background-color: #5ccfff;
+}
+.f8l {
+  display: flex;
+  grid-area: f8l;
+  background-color: #5ccfff;
+}
+.f8r {
+  display: flex;
+  grid-area: f8r;
+  background-color: #68ffec;
+}
+.f9 {
+  display: flex;
+  grid-area: f9;
+  background-color: #52dbe8;
+}
+.f9l {
+  display: flex;
+  grid-area: f9l;
+  background-color: #52dbe8;
+}
+.f9r {
+  display: flex;
+  grid-area: f9r;
+  background-color: #68ffec;
+}
+.f10 {
+  display: flex;
+  grid-area: f10;
+  background-color: #5ccfff;
+}
+.f10l {
+  display: flex;
+  grid-area: f10l;
+  background-color: #5ccfff;
+}
+.f10r {
+  display: flex;
+  grid-area: f10r;
+  background-color: #68ffec;
+}
+.f10b {
+  display: flex;
+  grid-area: f10b;
+  background-color: #68ffec;
+}
 .total {
+  display: flex;
   grid-area: total;
+  background-color: #52dbe8;
 }
