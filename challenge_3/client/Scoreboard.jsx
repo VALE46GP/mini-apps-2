@@ -13,7 +13,7 @@ class Scoreboard extends React.Component {
       <div>
         <div className="grid-container">
           <div className="t-name">name</div>
-          <div className="name">Ericio</div>
+          <div className="name">El Duderino</div>
 
           <div className="t1">1</div>
           <div className="f1">1</div>
